@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar C",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-Wall",
+                "-I", "${workspaceFolder}/include",
+                "${workspaceFolder}/src/main.c",
+                "${workspaceFolder}/src/lista.c",
+                "${workspaceFolder}/src/fila.c",
+                "-o",
+                "${workspaceFolder}/programa.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compila todos os arquivos .c do projeto"
+        }
+    ]
+}
