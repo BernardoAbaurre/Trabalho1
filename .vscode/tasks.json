@@ -11,8 +11,8 @@
                 "-Wall",
                 "-I", "${workspaceFolder}/include",
                 "${workspaceFolder}/src/main.c",
-                "${workspaceFolder}/src/lista.c",
-                "${workspaceFolder}/src/fila.c",
+                "${workspaceFolder}/src/lista_arquivados.c",
+                "${workspaceFolder}/src/util.c",
                 "-o",
                 "${workspaceFolder}/programa.exe"
             ],
