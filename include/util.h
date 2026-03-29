@@ -9,6 +9,7 @@
 void limpar_buffer(void);
 void ler_string(const char *msg, char *dest, int tamanho);
 int ler_int(const char *msg);
+int converter_data_para_dias(const char *data, int *dias);
 void pausar_enter(void);
 void limpar_tela(void);
 

@@ -5,12 +5,17 @@
 #define TAM_EMAIL 100
 #define TAM_TEL 30
 
-typedef struct {
+typedef struct
+{
     int codigo;
     char nome[TAM_NOME];
     int idade;
     char email[TAM_EMAIL];
     char telefone[TAM_TEL];
+    int dataCadastro;
 } Cliente;
+
+int cliente_criar(Cliente *cliente);
+void cliente_imprimir(Cliente cliente);
 
 #endif
