@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lista.h"
+#include "util.h"
 
 static int lista_vazia(const Lista *lista)
 {
@@ -83,7 +84,10 @@ void listar_clientes(const Lista *lista)
         return;
     }
 
-    printf("\n=== CLIENTES ARQUIVADOS ===\n");
+    printf("\n");
+    exibir_separador();
+    printf(" CLIENTES ARQUIVADOS\n");
+    exibir_separador();
     atual = lista->primeiro;
 
     while (atual != NULL)

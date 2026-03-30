@@ -14,6 +14,11 @@
                 "${workspaceFolder}/src/main.c",
                 "${workspaceFolder}/src/lista.c",
                 "${workspaceFolder}/src/lista_dupla.c",
+                "${workspaceFolder}/src/fila.c",
+                "${workspaceFolder}/src/menu_cadastro.c",
+                "${workspaceFolder}/src/menu_realizar_contato.c",
+                "${workspaceFolder}/src/menu_relatorios.c",
+                "${workspaceFolder}/src/menu_finalizar_atendimento.c",
                 "${workspaceFolder}/src/util.c",
                 "-o",
                 "${workspaceFolder}/programa.exe"

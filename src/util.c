@@ -47,6 +47,11 @@ int ler_int(const char *msg)
     return valor;
 }
 
+void exibir_separador(void)
+{
+    printf("=================================================\n");
+}
+
 int converter_data_para_dias(const char *data, int *dias)
 {
     const int segundos_por_dia = 86400;

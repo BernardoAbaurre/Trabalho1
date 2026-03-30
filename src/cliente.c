@@ -13,7 +13,10 @@ int cliente_criar(Cliente *cliente)
         return 0;
     }
 
-    printf("\n=== DADOS DO CLIENTE ===\n");
+    printf("\n");
+    exibir_separador();
+    printf(" DADOS DO CLIENTE\n");
+    exibir_separador();
     cliente->codigo = ler_int("Codigo: ");
     ler_string("Nome: ", cliente->nome, TAM_NOME);
     cliente->idade = ler_int("Idade: ");
@@ -59,5 +62,4 @@ void cliente_imprimir(const Cliente cliente)
     {
         printf("Cadastro : em %d dia(s) (data futura)\n", -dias_desde_cadastro);
     }
-
 }
