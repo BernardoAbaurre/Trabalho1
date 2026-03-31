@@ -10,6 +10,8 @@ static void finalizar_como_comprador(ListaDupla *aguardando_contato,
 
     c = no_cliente->dados;
 
+    cliente_coletar_dados_efetivacao(&c);
+
     if (!lista_dupla_remover(aguardando_contato, no_cliente))
     {
         printf("\n Falha ao remover cliente da lista de aguardando.\n");
@@ -32,7 +34,7 @@ static void finalizar_como_nao_comprador(ListaDupla *aguardando_contato,
     int arquivar;
     Cliente cliente;
 
-    arquivar = ler_int(" Deseja arquivar os dados do cliente? (1 = Sim / 0 = Nao): ");
+    arquivar = perguntar_sim_nao(" Deseja arquivar os dados para contato futuro?");
 
     cliente = no_cliente->dados;
 
@@ -69,7 +71,7 @@ void menu_finalizar_atendimento(ListaDupla *aguardando_contato,
     printf("   FINALIZAR ATENDIMENTO - %s\n", no_cliente->dados.nome);
     exibir_separador();
 
-    int comprou = ler_int(" O cliente comprou o produto? (1 = Sim / 0 = Nao): ");
+    int comprou = perguntar_sim_nao(" O cliente comprou o produto?");
 
     if (comprou == 1)
     {

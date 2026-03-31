@@ -47,6 +47,26 @@ int ler_int(const char *msg)
     return valor;
 }
 
+int perguntar_sim_nao(const char *pergunta)
+{
+    int resposta;
+    char prompt[256];
+
+    snprintf(prompt, sizeof(prompt), "%s (1 = Sim / 0 = Não): ", pergunta);
+
+    do
+    {
+        resposta = ler_int(prompt);
+
+        if (resposta != 0 && resposta != 1)
+        {
+            printf("Opcao invalida. Digite 1 para Sim ou 0 para Não.\n");
+        }
+    } while (resposta != 0 && resposta != 1);
+
+    return resposta;
+}
+
 void exibir_separador(void)
 {
     printf("=================================================\n");
